@@ -79,7 +79,7 @@ func second_solution(input string) int {
 }
 
 func main() {
-	dat, _ := ioutil.ReadFile("/home/tib/workspace/adventOfCode/2015/day-3/input")
+	dat, _ := ioutil.ReadFile("input")
 	str_input := string(dat)
 
 	fmt.Println("Houses that received at least one present:", first_solution(str_input))
