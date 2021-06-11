@@ -17,8 +17,8 @@ Use `make new-go year=2015 day=01` to create the folder structure needed to solv
 | 02 | :star2:|  |  |  |  |  |
 | 03 | :star2:|  |  |  |  |  |
 | 04 | :star2:|  |  |  |  |  |
-| 05 | |  |  |  |  |  |
-| 06 | |  |  |  |  |  |
+| 05 | :star2:|  |  |  |  |  |
+| 06 | :star2:|  |  |  |  |  |
 | 07 |  |  |  |  |  |  |
 | 08 |  |  |  |  |  |  |
 | 09 |  |  |  |  |  |  |
