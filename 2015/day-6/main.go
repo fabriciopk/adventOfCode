@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-var lights [1000][1000]bool
+var lights [1000][1000]int
 
 const (
 	on = iota + 1
@@ -22,11 +22,16 @@ func controlLight(x_low int, y_low int, x_up int, y_up int, ctl_type int) {
 		for j = y_low; j < y_up+1; j++ {
 			switch ctl_type {
 			case on:
-				lights[i][j] = true
+				lights[i][j] += 1
 			case off:
-				lights[i][j] = false
+				val := lights[i][j] - 1
+				if val < 0 {
+					lights[i][j] = 0
+				} else {
+					lights[i][j] = val
+				}
 			case toggle:
-				lights[i][j] = !lights[i][j]
+				lights[i][j] += 2
 			}
 		}
 	}
@@ -62,9 +67,7 @@ func main() {
 	var i, j int
 	for i = 0; i < 1000; i++ {
 		for j = 0; j < 1000; j++ {
-			if lights[i][j] {
-				cnt += 1
-			}
+			cnt += lights[i][j]
 		}
 	}
 	fmt.Println(cnt)
